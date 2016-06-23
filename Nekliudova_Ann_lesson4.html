@@ -1,2 +1,33 @@
 <meta charset=UTF-8>
 <script language="javascript">
+ var users = [
+		{
+
+ 			firstName: 'Dmitry',
+ 			lastName: 'Pupkin',
+ 			dataBirht: '15.05.2000',
+ 			phones: [ '3332233',
+ 					  '2244552',
+			]
+		},
+			{
+			firstName: 'Vasily',
+ 			lastName: 'Petrov',
+ 			dataBirht: '15.05.1990',
+ 			phones: [ '3337773',
+ 					  '2241888',
+			]
+		}
+
+];
+
+var user =[];
+
+user.firstName = prompt('Ваше имя?' , '');
+user.lastName = prompt('Ваша фамилия?' , '');
+user.dataBirht = prompt('Ваша дата рождения?' , '');
+user.phone = prompt('Ваш телефон?' , '');
+
+users.push(user);
+
+</script>
