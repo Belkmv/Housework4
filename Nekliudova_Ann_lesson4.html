@@ -22,12 +22,23 @@
 ];
 
 var user =[];
+var usersCounter = prompt('Сколько человек добавить в список?', 3);
 
-user.firstName = prompt('Ваше имя?' , '');
-user.lastName = prompt('Ваша фамилия?' , '');
-user.dataBirht = prompt('Ваша дата рождения?' , '');
-user.phone = prompt('Ваш телефон?' , '');
+for( var i= 0; i < usersCounter; i++){
+
+	user.firstName = prompt('Ваше имя?' , '');
+	user.lastName = prompt('Ваша фамилия?' , '');
+	user.dataBirht = prompt('Ваша дата рождения?' , '');
+
+	user.phones= [];
+
+	for( var p=0; p <= 2; p++){
+	user.phones.push(user.phone = prompt('Ваш телефон?' , ''));
+	}
 
 users.push(user);
-
+}
+for(var n =0; n<= users.length; n++){
+console.log((n+1) + '\n'+'Имя:'+ ' ' + "'" + users[n].firstName + "'" + ' ' + 'Фамилия:'+ ' ' + "'" + users[n].lastName + "'" + ' ' +'ДР:'+ ' ' + "'" + users[n].dataBirht + "'" + ' '+'телефон:'+ ' ' + "'" + users[n].phones + "'" + '');
+}
 </script>
