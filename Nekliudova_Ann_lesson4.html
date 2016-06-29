@@ -7,24 +7,24 @@
  			lastName: 'Pupkin',
  			dataBirht: '15.05.2000',
  			phones: [ '3332233',
- 					  '2244552',
+ 					  '2244552'
 			]
 		},
-			{
+		{
 			firstName: 'Vasily',
  			lastName: 'Petrov',
  			dataBirht: '15.05.1990',
  			phones: [ '3337773',
- 					  '2241888',
+ 					  '2241888'
 			]
 		}
 
 ];
 
-var user =[];
-var usersCounter = prompt('Сколько человек добавить в список?', 3);
 
-for( var i= 0; i < usersCounter; i++){
+var user =[];
+
+function getUsers(){
 
 	user.firstName = prompt('Ваше имя?' , '');
 	user.lastName = prompt('Ваша фамилия?' , '');
@@ -34,11 +34,34 @@ for( var i= 0; i < usersCounter; i++){
 
 	for( var p=0; p <= 2; p++){
 	user.phones.push(user.phone = prompt('Ваш телефон?' , ''));
+		}
+		return user;
 	}
 
+user = getUsers();
 users.push(user);
+
+function showUsers(){
+
+return ('\n'+'Имя:'+ ' ' + "'" + users[n].firstName + "'" + ' ' + 'Фамилия:'+ ' ' + "'" + users[n].lastName + "'" + ' ' +'ДР:'+ ' ' + "'" + users[n].dataBirht + "'" + ' '+'телефон:'+ ' ' + "'" + users[n].phones + "'" + '');
 }
-for(var n =0; n<= users.length; n++){
-console.log((n+1) + '\n'+'Имя:'+ ' ' + "'" + users[n].firstName + "'" + ' ' + 'Фамилия:'+ ' ' + "'" + users[n].lastName + "'" + ' ' +'ДР:'+ ' ' + "'" + users[n].dataBirht + "'" + ' '+'телефон:'+ ' ' + "'" + users[n].phones + "'" + '');
+
+for(var n =0; n< users.length; n++){
+	console.log(showUsers);
 }
+  
+------------------------------------------------------------------------
+
+function min( a, b){
+	if (a<= b) ? a : b ;
+}
+
+console.log(min(0, 10)); 
+console.log(min(0, -10)); 
+
+------------------------------------------------------------------------
+
+
+
+
 </script>
