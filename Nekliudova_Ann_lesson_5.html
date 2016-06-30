@@ -2,25 +2,36 @@
 <script language='javascript'>
 
 function rgb2hesh(r, g, b ){
-	if (r < 10) r ='0' + r;
-		if (g < 10)g ='0' + g;
-			if (b<10) b ='0' + b;
+	if (r < 10 ) r ='0' + r;
+		if (g < 10 ) g ='0' + g;
+			if (b<10 ) b ='0' + b;
 
 return "#" + r.toString(16) + g.toString(16) + b.toString(16);
 }
-console.log(rgb2hesh(255, 200, 63));
+console.log(rgb2hesh(0, 0, 0));
 
 //
+function number2object(num){
+	var lab =['еденицы', 'десятки', 'сотни', 'тысячи'];
+	var buffer = num.toString().split('').reverse();
+	result ={};
+	for(var i =0; i < buffer.length; i++){
+		result[lab[i]] = buffer[i];
+	}
+	return result;
+}
+
+
 function objectToQueryString (object){
 	var str= '';
 	for ( var k in object){
-		if(str.length !=0)  str += '&';
+		str += k + '=' + object[k] + '&';
 	}
+
+	return str.substr(0, str.lenght, -1);
 }
 
 
-function number2object(){
 
-}
 
 </script>
