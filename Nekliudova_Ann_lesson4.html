@@ -24,7 +24,7 @@
 
 var user =[];
 
-function getUsers(){
+function newUsers(){
 
 	user.firstName = prompt('Ваше имя?' , '');
 	user.lastName = prompt('Ваша фамилия?' , '');
@@ -38,7 +38,7 @@ function getUsers(){
 		return user;
 	}
 
-user = getUsers();
+user = newUsers();
 users.push(user);
 
 function showUsers(){
