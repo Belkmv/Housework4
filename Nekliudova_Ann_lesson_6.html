@@ -1,2 +1,33 @@
 <meta charset=UTF-8>
 <script language="javascript">
+
+
+function prepend(item, list){
+  return {'value' : item, 'rest' : list};
+}
+
+function nth(index, list){
+  return listToArray(list)[index];
+}
+
+function arrayToList(arr, i) {
+    i = (i == undefined) ? 0 : i;
+    return (i < arr.length) ? {'value' : arr[i], 'rest' : arrayToList(arr, ++i)} : null;
+}
+
+function listToArray(list) {
+  return (list.rest != null) ? [list.value].concat(listToArray(list.rest)) : [list.value];
+}
+var list  = arrayToList([1,2,3]);
+
+console.log(JSON.stringify(list));
+
+console.log(listToArray(list));
+
+console.log(JSON.stringify(prepend(5, list)));
+
+console.log(nth(0,list));
+
+console.log(nth(10,list));
+
+</script>
